@@ -117,7 +117,7 @@ function App() {
                 >
                   <Avatar
                     size={"2xl"}
-                    src="/jack.png"
+                    src="/jack.jpg"
                     alignSelf={{ sm: "center", md: "initial" }}
                   />
                   <VStack textAlign={{ sm: "center", md: "left" }}>
