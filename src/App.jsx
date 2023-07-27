@@ -214,7 +214,7 @@ function App() {
                         </Highlight>
                       </Text>
                       <ButtonGroup width={"100%"}>
-                        <Link href="/public/CV_JacksonParedesFerranti_2023.pdf">
+                        <Link href="/CV_JacksonParedesFerranti_2023.pdf">
                           <Button
                             colorScheme="green"
                             width={{ sm: "100%", md: "initial" }}
