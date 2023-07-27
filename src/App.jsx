@@ -117,7 +117,7 @@ function App() {
                 >
                   <Avatar
                     size={"2xl"}
-                    src="https://i.imgur.com/KymB1Pn.jpg"
+                    src="/jack.png"
                     alignSelf={{ sm: "center", md: "initial" }}
                   />
                   <VStack textAlign={{ sm: "center", md: "left" }}>
@@ -177,7 +177,7 @@ function App() {
                   </Heading>
                   <Stack width={"100%"} direction={{ sm: "column", md: "row" }}>
                     <Avatar
-                      src="https://i.imgur.com/cLPob8e.jpg"
+                      src="/jack2.jpg"
                       size={"2xl"}
                       alignSelf={{ sm: "center", md: "initial" }}
                     />
