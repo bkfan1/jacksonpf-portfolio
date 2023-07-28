@@ -11,6 +11,7 @@ import {
 import ProjectCard from "./ProjectCard";
 import { nanoid } from "nanoid";
 import useLocalPagination from "../hooks/useLocalPagination";
+import { BsChevronDoubleLeft, BsChevronDoubleRight } from "react-icons/bs";
 
 export const projectTags = [
   { id: nanoid(), name: "WEB DEV", colorScheme: "red" },
@@ -179,6 +180,8 @@ export default function PortfolioGrid() {
             colorScheme="blue"
             variant={"ghost"}
             isDisabled={currentPage === 1}
+            leftIcon={<BsChevronDoubleLeft
+            />}
           >
             Prev page
           </Button>
@@ -187,6 +190,7 @@ export default function PortfolioGrid() {
             onClick={handleNextPage}
             colorScheme="blue"
             isDisabled={currentPage === totalPages}
+            rightIcon={<BsChevronDoubleRight/>}
           >
             Next page
           </Button>
