@@ -10,7 +10,7 @@ export default function MediaButton({ icon, username, link }) {
           justifyContent={"center"}
           gap={1}
         >
-          <Icon as={icon} boxSize={12} color={"blue.700"} />
+          <Icon as={icon} boxSize={12} color={"blue.500"} />
           <Text>{username}</Text>
         </Flex>
       </Link>
