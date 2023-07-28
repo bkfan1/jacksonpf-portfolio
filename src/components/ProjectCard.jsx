@@ -1,5 +1,4 @@
 import {
-  Badge,
   Button,
   Card,
   CardBody,
@@ -12,29 +11,31 @@ import {
   Tag,
   Text,
 } from "@chakra-ui/react";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsPlayCircleFill } from "react-icons/bs";
 
 export default function ProjectCard({ data }) {
   const { name, description, cover_image, urls, tags } = data;
   return (
     <>
-      <Card>
+      <Card _hover={{
+        shadow:"xl"
+      }}>
         <Image src={cover_image} />
         <CardBody>
           <Heading size={"md"}>{name}</Heading>
-          <Text>{description}</Text>
+          <Text textAlign={"justify"}>{description}</Text>
         </CardBody>
 
         <CardFooter flexDirection={"column"} gap={4}>
           <Flex flexDirection={"column"} gap={2} width={"100%"}>
             <Link href={urls.code} isExternal>
-              <Button leftIcon={<BsGithub />} width={{ sm: "100%" }}>
+              <Button leftIcon={<BsGithub />} width={{ base: "100%" }}>
                 Source code
               </Button>
             </Link>
             {urls.demo ? (
               <Link href={urls.demo} isExternal>
-                <Button colorScheme="green" width={{ sm: "100%" }}>
+                <Button leftIcon={<BsPlayCircleFill/>}  colorScheme="green" width={{ base: "100%" }}>
                   Live demo
                 </Button>
               </Link>
