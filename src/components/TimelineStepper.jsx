@@ -23,17 +23,24 @@ export default function TimelineStepper({ timelineData }) {
 
             <Box flexShrink={"0"}>
               <StepTitle>
-                <Text width={{base:"44",sm:"xs", md:"md", lg:"2xl"}}>
+                <Text
+                  width={{ base: "44", sm: "xs", md: "md", lg: "2xl" }}
+                  textAlign={"left"}
+                >
                   <Highlight query={title} styles={{ fontWeight: "bold" }}>
                     {`${title} - ${place}`}
                   </Highlight>
                 </Text>
               </StepTitle>
-              <Text color={"gray"} fontSize={"sm"} my={1}>
+              <Text color={"gray"} fontSize={"sm"} my={1} textAlign={"left"}>
                 {date}
               </Text>
               <StepDescription>
-                <Text width={{base:"44",sm:"xs", md:"md", lg:"2xl"}} color={"black"}>
+                <Text
+                  width={{ base: "44", sm: "xs", md: "md", lg: "2xl" }}
+                  color={"black"}
+                  textAlign={"left"}
+                >
                   {description}
                 </Text>
               </StepDescription>
