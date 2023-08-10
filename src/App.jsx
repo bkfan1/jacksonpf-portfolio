@@ -119,7 +119,6 @@ function App() {
                 <TabPanel
                   backgroundImage={`url(/polygon.svg)`}
                   backgroundRepeat={"no-repeat"}
-                  backgroundPosition={{ base: "top", md: "revert" }}
                   backgroundSize={"cover"}
                 >
                   <Flex minHeight={"100vh"} justifyContent={"center"}>
@@ -132,6 +131,7 @@ function App() {
                       <Heading
                         width={"100%"}
                         textAlign={{ base: "center", md: "left" }}
+                        mb={2}
                       >
                         About me
                       </Heading>
@@ -153,7 +153,7 @@ function App() {
                             <Highlight
                               query={[
                                 "software developer",
-                                "always passionate, curious",
+                                "He is always passionate, curious",
                                 "detail-oriented",
                               ]}
                               styles={{
@@ -198,7 +198,8 @@ function App() {
                     <VStack width={"100%"} my={6}>
                       <Heading
                         width={"100%"}
-                        textAlign={{ base: "center", md: "right" }}
+                        textAlign={{ base: "center", md: "left" }}
+                        mb={2}
                       >
                         Education
                       </Heading>
@@ -227,8 +228,8 @@ function App() {
                     px={16}
                   >
                     <VStack width={"100%"}>
-                      <Heading width={"100%"}>Portfolio</Heading>
-                      <Text width={"100%"}>
+                      <Heading width={"100%"} textAlign={{base:"center", sm:"left"}}>Portfolio</Heading>
+                      <Text width={"100%"} textAlign={{base:"center", sm:"left"}}>
                         Projects I would like to highlight
                       </Text>
                     </VStack>
