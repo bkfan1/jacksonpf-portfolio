@@ -20,18 +20,20 @@ export default function HomeHero() {
         height={"fit-content"}
         p={4}
         mt={"44"}
-        backgroundColor={{base:"white", md:"transparent"}}
-        border={{base:"1px", md:"none"}}
-        borderColor={{base:"lightgray", md:"none"}}
-        rounded={{base:"md", md:"none"}}
-        shadow={{base:"md", md:"none"}}
-
+        backgroundColor={{ base: "white", md: "transparent" }}
+        border={{ base: "1px", md: "none" }}
+        borderColor={{ base: "lightgray", md: "none" }}
+        rounded={{ base: "md", md: "none" }}
+        shadow={{ base: "md", md: "none" }}
         gap={4}
       >
         <Avatar
-          src="/jack.jpg"
+          src={"/jack.jpg"}
           size={"2xl"}
           alignSelf={{ base: "center", md: "initial" }}
+          name="Jackson Paredes Ferranti"
+          bg={"blue.500"}
+          textColor={"white"}
         />
 
         <VStack textAlign={{ base: "center", md: "left" }}>
@@ -39,7 +41,12 @@ export default function HomeHero() {
           <Heading size={"2xl"} width={"100%"} color={"blue.500"}>
             Web Developer
           </Heading>
-          <Text display={{base:"none", md:"initial"}} fontSize={{base:"sm", md:"md", lg:"lg"}} width={{base:"sm", md:"lg"}}  lineHeight={"8"}>
+          <Text
+            display={{ base: "none", md: "initial" }}
+            fontSize={{ base: "sm", md: "md", lg: "lg" }}
+            width={{ base: "sm", md: "lg" }}
+            lineHeight={"8"}
+          >
             <Highlight
               query={[
                 "focused on creating solutions",
@@ -59,14 +66,17 @@ export default function HomeHero() {
             </Highlight>
           </Text>
 
-          <ButtonGroup width={"100%"} size={{base:"md",lg:"lg"}}>
-            <Link width={{base:"100%", md:"initial"}} href="mailto:jpf8296@gmail.com" isExternal>
+          <ButtonGroup width={"100%"} size={{ base: "md", lg: "lg" }}>
+            <Link
+              width={{ base: "100%", md: "initial" }}
+              href="mailto:jpf8296@gmail.com"
+              isExternal
+            >
               <Button
                 rightIcon={<BsChatTextFill />}
                 width={{ base: "100%", md: "initial" }}
-                mt={{base:"2"}}
+                mt={{ base: "2" }}
                 colorScheme="blue"
-                variant={{base:"solid", md:"outline"}}
               >
                 Contact me
               </Button>
