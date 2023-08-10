@@ -2,6 +2,7 @@ import {
   Button,
   ButtonGroup,
   HStack,
+  IconButton,
   Link,
   SimpleGrid,
   Text,
@@ -174,7 +175,8 @@ export default function PortfolioGrid() {
   return (
     <>
       <VStack>
-        <ButtonGroup width={"100%"} justifyContent={"space-between"}>
+        <ButtonGroup display={{base:"none", md:"flex"}} width={"100%"} justifyContent={"space-between"}>
+
           <Button
             onClick={handlePrevPage}
             colorScheme="blue"
@@ -194,7 +196,17 @@ export default function PortfolioGrid() {
           >
             Next page
           </Button>
+
+
         </ButtonGroup>
+
+        <ButtonGroup display={{base:"flex", md:"none"}} width={"100%"} justifyContent={"space-between"}>
+        <IconButton onClick={handlePrevPage} isDisabled={currentPage === 1} icon={<BsChevronDoubleLeft/>} colorScheme="blue" variant={"ghost"} />
+
+          <IconButton onClick={handleNextPage} isDisabled={currentPage === totalPages} icon={<BsChevronDoubleRight/>} colorScheme="blue" />
+        </ButtonGroup>
+
+
         <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing="40px">
           {paginatedData().map((project) => (
             <ProjectCard key={project.id} data={project} />
