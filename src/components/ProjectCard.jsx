@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardBody,
@@ -17,12 +18,18 @@ export default function ProjectCard({ data }) {
   const { name, description, cover_image, urls, tags } = data;
   return (
     <>
-      <Card _hover={{
-        shadow:"xl"
-      }}>
-        <Image src={cover_image} />
+      <Card
+        _hover={{
+          shadow: "xl",
+        }}
+      >
+        <Box background={"lightgray"} >
+          <Image src={cover_image}/>
+        </Box>
         <CardBody>
-          <Heading size={"md"}>{name}</Heading>
+          <Heading size={"md"} textAlign={{ base: "center", sm: "left" }}>
+            {name}
+          </Heading>
           <Text textAlign={"justify"}>{description}</Text>
         </CardBody>
 
@@ -35,7 +42,11 @@ export default function ProjectCard({ data }) {
             </Link>
             {urls.demo ? (
               <Link href={urls.demo} isExternal>
-                <Button leftIcon={<BsPlayCircleFill/>}  colorScheme="green" width={{ base: "100%" }}>
+                <Button
+                  leftIcon={<BsPlayCircleFill />}
+                  colorScheme="green"
+                  width={{ base: "100%" }}
+                >
                   Live demo
                 </Button>
               </Link>
