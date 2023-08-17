@@ -1,9 +1,9 @@
 import {
-  Box,
   Button,
   Card,
   CardBody,
   CardFooter,
+  CardHeader,
   Flex,
   HStack,
   Heading,
@@ -23,9 +23,9 @@ export default function ProjectCard({ data }) {
           shadow: "xl",
         }}
       >
-        <Box background={"lightgray"} >
-          <Image src={cover_image}/>
-        </Box>
+        <CardHeader height={"xs"}>
+          <Image src={`${cover_image}`} height="100%" objectFit={"contain"} />
+        </CardHeader>
         <CardBody>
           <Heading size={"md"} textAlign={{ base: "center", sm: "left" }}>
             {name}
