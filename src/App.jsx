@@ -22,11 +22,9 @@ import {
 } from "@chakra-ui/react";
 import PortfolioGrid from "./components/PortfolioGrid";
 import {
-  BsAwardFill,
   BsBriefcaseFill,
   BsEnvelope,
   BsFillFileTextFill,
-  BsGearFill,
   BsGithub,
   BsHouseFill,
   BsJournalBookmarkFill,
@@ -35,50 +33,11 @@ import {
   BsPhone,
 } from "react-icons/bs";
 import MediaButton from "./components/MediaButton";
-import { nanoid } from "nanoid";
 import TimelineStepper from "./components/TimelineStepper";
 import useIsMounted from "./hooks/useIsMounted";
 import HomeHero from "./components/HomeHero";
+import { education, workExperience } from "./utils/portfolioData";
 
-const workExperience = [
-  {
-    id: nanoid(),
-    place: "Synlimite",
-    title: "Frontend Developer",
-    date: "March 2021 - Sept 2022",
-    icon: <BsGearFill />,
-    description:
-      "Develop, maintain and update reactive UI components, create custom CSS styles, state management, pages and routing. ",
-  },
-  {
-    id: nanoid(),
-    place: "Studio Huella",
-    title: "Web Designer",
-    date: "March 2021 - March 2022",
-    icon: <BsGearFill />,
-    description:
-      "Responsible for creating the visual design and layout of websites using HTML and CSS.",
-  },
-];
-
-const education = [
-  {
-    id: nanoid(),
-    place: `Universidad Experimental de Los Llanos "Ezequiel Zamora"`,
-    title: "Computer Engineer",
-    icon: <BsAwardFill />,
-    date: "March 2020 - March 2025",
-    description: "",
-  },
-  {
-    id: nanoid(),
-    place: `Unidad Educativa "San Judas Tadeo"`,
-    title: "High School Graduate",
-    icon: <BsAwardFill />,
-    date: "Sept. 2014 - June 2019",
-    description: "",
-  },
-];
 
 function App() {
   const { isMounted } = useIsMounted();
