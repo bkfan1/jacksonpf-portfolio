@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Card,
   CardBody,
@@ -7,12 +8,19 @@ import {
   Flex,
   HStack,
   Heading,
+  Icon,
   Image,
   Link,
   Tag,
   Text,
 } from "@chakra-ui/react";
-import { BsGithub, BsPlayCircleFill } from "react-icons/bs";
+import {
+  BsCode,
+  BsCodeSlash,
+  BsGithub,
+  BsPlayCircleFill,
+} from "react-icons/bs";
+import ProjectImagePlaceHolder from "../misc/ProjectImagePlaceHolder";
 
 export default function ProjectCard({ data }) {
   const { name, description, cover_image, urls, tags } = data;
@@ -24,7 +32,18 @@ export default function ProjectCard({ data }) {
         }}
       >
         <CardHeader height={"xs"}>
-          <Image src={`${cover_image}`} height="100%" objectFit={"contain"} />
+          {cover_image ? (
+            <Image
+              src={`${cover_image}`}
+              height="100%"
+              objectFit={"contain"}
+              alt={`Picture of project: ${name}`}
+            />
+          ) : (
+            <>
+              <ProjectImagePlaceHolder />
+            </>
+          )}
         </CardHeader>
         <CardBody>
           <Heading size={"md"} textAlign={{ base: "center", sm: "left" }}>
