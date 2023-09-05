@@ -10,15 +10,19 @@ import {
   Stepper,
   Text,
 } from "@chakra-ui/react";
+import { BsAwardFill, BsFillGearFill } from "react-icons/bs";
 
-export default function TimelineStepper({ timelineData }) {
+export default function TimelineStepper({ timelineData, type }) {
+  
+  const stepIcon = type === "work" ? <BsFillGearFill/> : type === "education" ? <BsAwardFill/> : ""
+
   return (
     <>
       <Stepper orientation="vertical" width={"100%"}>
-        {timelineData.map(({ id, place, title, date, description, icon }) => (
+        {timelineData.map(({ id, place, title, date, description }) => (
           <Step key={id}>
             <StepIndicator>
-              <StepStatus incomplete={""} active={icon} />
+              <StepStatus incomplete={""} active={stepIcon} />
             </StepIndicator>
 
             <Box flexShrink={"0"}>

@@ -55,6 +55,7 @@ export default function HomeHero() {
               styles={{
                 px: 2,
                 py: 1,
+                my:1,
                 rounded: "full",
                 fontWeight: "bold",
                 color: "white",

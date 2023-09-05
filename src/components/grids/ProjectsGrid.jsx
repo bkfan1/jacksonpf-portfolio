@@ -9,11 +9,11 @@ import {
   Tooltip,
   VStack,
 } from "@chakra-ui/react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../cards/ProjectCard";
 import { nanoid } from "nanoid";
-import useLocalPagination from "../hooks/useLocalPagination";
+import useLocalPagination from "../../hooks/useLocalPagination";
 import { BsChevronDoubleLeft, BsChevronDoubleRight } from "react-icons/bs";
-import { projects } from "../utils/portfolioData";
+import { projects } from "../../utils/portfolioData";
 
 
 function createItemsUsingForLoop(num) {
@@ -24,7 +24,7 @@ function createItemsUsingForLoop(num) {
   return items;
 }
 
-export default function PortfolioGrid() {
+export default function ProjectsGrid() {
   const {
     currentPage,
     totalPages,
