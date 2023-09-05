@@ -1,5 +1,4 @@
 import { nanoid } from "nanoid";
-import { BsAwardFill, BsGearFill } from "react-icons/bs";
 
 export const workExperience = [
   {
@@ -7,7 +6,6 @@ export const workExperience = [
     place: "Synlimite",
     title: "Frontend Developer",
     date: "March 2021 - Sept 2022",
-    icon: <BsGearFill />,
     description:
       "Develop, maintain and update reactive UI components, create custom CSS styles, state management, pages and routing. ",
   },
@@ -16,7 +14,6 @@ export const workExperience = [
     place: "Studio Huella",
     title: "Web Designer",
     date: "March 2021 - March 2022",
-    icon: <BsGearFill />,
     description:
       "Responsible for creating the visual design and layout of websites using HTML and CSS.",
   },
@@ -27,7 +24,6 @@ export const education = [
     id: nanoid(),
     place: `Universidad Experimental de Los Llanos "Ezequiel Zamora"`,
     title: "Computer Engineer",
-    icon: <BsAwardFill />,
     date: "March 2020 - March 2025",
     description: "",
   },
@@ -35,7 +31,6 @@ export const education = [
     id: nanoid(),
     place: `Unidad Educativa "San Judas Tadeo"`,
     title: "High School Graduate",
-    icon: <BsAwardFill />,
     date: "Sept. 2014 - June 2019",
     description: "",
   },
