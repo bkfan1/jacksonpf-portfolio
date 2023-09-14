@@ -56,8 +56,8 @@ export default function AboutTab() {
                   }}
                 >
                   Jackson Paredes Ferranti is a software developer currently
-                  focused on web development looking opportunities for takes his
-                  career further. He is always passionate, curious, and
+                  focused on web development looking for opportunities to take his
+                  career further in the IT industry. He is always passionate, curious, and
                   interested in computer science topics such as data science,
                   artificial intelligence, data structures, algorithms, and many
                   more. As a worker, he is detail-oriented and likes to explore
