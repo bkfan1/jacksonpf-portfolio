@@ -37,9 +37,13 @@ function AboutPage() {
           }}
           boxSize={"sm"}
         >
-          <Box backgroundColor={"lightgray"}>
-            <Image src={JackoImage} alt="Picture of Jackson Paredes Ferranti" />
-          </Box>
+          <Image
+            src={JackoImage}
+            objectFit='cover'
+            alt="Picture of Jackson Paredes Ferranti"
+            boxSize={"140px"}
+            rounded={"full"}
+          />
 
           <VStack marginY={2}>
             <Heading width={"full"} size={"md"} textAlign={"left"}>
