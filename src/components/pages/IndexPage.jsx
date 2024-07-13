@@ -1,8 +1,10 @@
 import {
+  Box,
   Button,
   Divider,
   HStack,
   Heading,
+  Icon,
   Image,
   Stack,
   StackDivider,
@@ -11,6 +13,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import JackoImage from "../../assets/jacko1.jpg";
+import { BsEnvelopeFill, BsTelephoneFill } from "react-icons/bs";
+import { contactData } from "../../utils/portfolioData";
 
 function IndexPage() {
   return (
@@ -34,9 +38,9 @@ function IndexPage() {
           marginTop={20}
         >
           <VStack alignItems={"start"}>
-            <Heading size={"lg"}>Hey there!</Heading>
+            <Heading size={"lg"}>👋 Hey there!</Heading>
             <Heading size={"4xl"}>{`I'm Jackson Paredes Ferranti`}</Heading>
-            <Heading>Web Developer</Heading>
+            <Heading size={"2xl"} my={4}>Web Developer</Heading>
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
               explicabo tempora distinctio provident error facilis, adipisci
@@ -45,7 +49,7 @@ function IndexPage() {
             </Text>
             <Button
               size={"lg"}
-              width={{ sm: "full", md: "md", lg: "md", xl:"initial" }}
+              width={{ sm: "full", md: "md", lg: "md", xl: "initial" }}
               mt={2}
             >
               Hire Me
@@ -59,21 +63,28 @@ function IndexPage() {
             gap={4}
           >
             <StackItem flex={1}>
+              <HStack>
+              <Icon as={BsEnvelopeFill} boxSize={6}  />
               <VStack>
                 <Heading size={"lg"} width={"full"}>
                   Email
                 </Heading>
-                <Text width={"full"}>jacko@ve.com</Text>
+                <Text width={"full"}>{contactData.email}</Text>
               </VStack>
+              </HStack>
+              
             </StackItem>
 
             <StackItem flex={1}>
+            <HStack>
+              <Icon as={BsTelephoneFill} boxSize={6}  />
               <VStack>
                 <Heading size={"lg"} width={"full"}>
                   Phone
                 </Heading>
-                <Text width={"full"}>+584245329011</Text>
+                <Text width={"full"}>{contactData.phone}</Text>
               </VStack>
+              </HStack>
             </StackItem>
           </HStack>
         </VStack>
@@ -87,9 +98,13 @@ function IndexPage() {
             lg: "none",
             xl: "initial",
           }}
-          boxSize={{base:"lg", lg:"md"}}
-          objectFit="contain"
+          boxSize={"sm"}
+          objectFit="cover"
+          rounded={"full"}
           alt="Picture of Jackson Paredes Ferranti"
+          border={"4px"}
+          borderColor={"white"}
+          
         />
       </Stack>
     </>
