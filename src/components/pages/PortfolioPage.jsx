@@ -5,14 +5,12 @@ import {
   Text,
   VStack,
   Box,
-  Button,
   IconButton,
 } from "@chakra-ui/react";
 import { projects } from "../../utils/portfolioData";
 import ProjectCard from "../cards/ProjectCard";
 import useLocalPagination from "../../hooks/useLocalPagination";
 import { motion } from "framer-motion";
-import { Link as ScrollLink, Element } from "react-scroll";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 const MotionBox = motion(Box);
@@ -24,9 +22,6 @@ function PortfolioPage() {
     paginatedData,
     nextPage,
     prevPage,
-    goToPage,
-    goToFirstPage,
-    goToLastPage,
   } = useLocalPagination(projects, 3);
 
   return (
@@ -72,7 +67,6 @@ function PortfolioPage() {
           onClick={prevPage}
           isDisabled={currentPage === 1}
           size={"lg"}
-          colorScheme="teal"
           rounded={"full"}
           icon={<BiChevronLeft />}
         ></IconButton>
@@ -85,7 +79,6 @@ function PortfolioPage() {
           onClick={nextPage}
           isDisabled={currentPage === totalPages}
           size={"lg"}
-          colorScheme="teal"
           rounded={"full"}
           icon={<BiChevronRight />}
         ></IconButton>
