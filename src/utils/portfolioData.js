@@ -1,5 +1,12 @@
 import { nanoid } from "nanoid";
 
+export const contactData= {
+  email:"jpf8296@gmail.com",
+  phone:"+584245329011",
+  linkedin:"https://www.linkedin.com/in/jacksonpf1",
+  github:"https://www.github.com/bkfan1"
+}
+
 export const workExperience = [
   {
     id: nanoid(),
