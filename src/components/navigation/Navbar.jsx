@@ -1,11 +1,42 @@
-import { Button, Flex, Stack, StackItem, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  HStack,
+  Icon,
+  Stack,
+  StackItem,
+  Text,
+} from "@chakra-ui/react";
 import { nanoid } from "nanoid";
+import {
+  BsBriefcase,
+  BsBriefcaseFill,
+  BsHouse,
+  BsHouseFill,
+  BsInfoCircle,
+  BsInfoCircleFill,
+} from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
 const pages = [
-  { id: nanoid(), text: "Home", route: "/" },
-  { id: nanoid(), text: "Portfolio", route: "/portfolio" },
-  { id: nanoid(), text: "About", route: "/about" },
+  {
+    id: nanoid(),
+    text: "Home",
+    route: "/",
+    icon: { normal: BsHouse, active: BsHouseFill },
+  },
+  {
+    id: nanoid(),
+    text: "Portfolio",
+    route: "/portfolio",
+    icon: { normal: BsBriefcase, active: BsBriefcaseFill },
+  },
+  {
+    id: nanoid(),
+    text: "About",
+    route: "/about",
+    icon: { normal: BsInfoCircle, active: BsInfoCircleFill },
+  },
 ];
 
 function Navbar() {
@@ -21,11 +52,20 @@ function Navbar() {
         paddingY={6}
       >
         <Stack id="navbar_menu" direction={"row"} align={"center"} gap={10}>
-          {pages.map(({ id, text, route }) => (
+          {pages.map(({ id, text, route, icon }) => (
             <StackItem key={id}>
               <NavLink to={route}>
                 {({ isActive, isPending, isTransitioning }) => (
-                  <Text as={isActive ? "u" : ""} textUnderlineOffset={8}>{text}</Text>
+                  <HStack fontSize={"large"}>
+                    <Icon as={isActive ? icon.active : icon.normal} />
+                    <Text
+                      as={isActive ? "u" : ""}
+                      fontWeight={isActive ? "600" : ""}
+                      textUnderlineOffset={8}
+                    >
+                      {text}
+                    </Text>
+                  </HStack>
                 )}
               </NavLink>
             </StackItem>
