@@ -1,0 +1,150 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "about": "Acerca de"
+  },
+  "hero": {
+    "greet": "¡Hola!",
+    "whoaim": "Soy Jackson Paredes Ferranti",
+    "role": "Desarrollador Web",
+    "description": "Desarrollador de software especializado en crear soluciones innovadoras con tecnologías web."
+  },
+  "about": {
+    "part1": "Soy Jackson Paredes Ferranti, un apasionado desarrollador de software especializado en crear soluciones innovadoras con tecnologías web.",
+    "part2": "Con 2 años de experiencia en desarrollo web, he adquirido una sólida expertise en frontend y el uso de stacks tecnológicos modernos. Me destaco por ser proactivo, curioso y atento al detalle, siempre buscando las formas más eficientes para llevar a cabo mi trabajo.",
+    "part3": "Mi objetivo en la industria tecnológica es desarrollar soluciones y productos increíbles a través del software, en proyectos que me permitan crecer profesional y personalmente de manera exponencial."
+  },
+
+  "titles": {
+    "about": "Acerca de mi",
+    "experience": "Experiencia",
+    "education": "Educación",
+    "portfolio": "Portafolio",
+    "email": "Email",
+    "phone": "Teléfono"
+  },
+  "buttons": {
+    "downloadCv": "Descargar CV",
+    "contact": "Contactar",
+    "knowMore": "Saber más",
+    "hireMe": "Contrátame",
+    "sourceCode": "Código fuente",
+    "liveDemo": "Demo en vivo"
+  },
+  "contact": {
+    "email": "jpf8296@gmail.com",
+    "phone": "+584245329011",
+    "linkedin": "https://www.linkedin.com/in/jacksonpf1",
+    "github": "https://www.github.com/bkfan1"
+  },
+  "experience": [
+    {
+      "place": "Synlimite",
+      "title": "Desarrollador Frontend",
+      "date": "Marzo 2021 - Sept 2022",
+      "description": "Desarrollar, mantener y actualizar componentes UI reactivos, crear estilos CSS personalizados, gestión de estado, páginas y enrutamiento."
+    },
+    {
+      "place": "Studio Huella",
+      "title": "Diseñador Web",
+      "date": "Marzo 2021 - Marzo 2022",
+      "description": "Responsable de crear el diseño visual y la maquetación de sitios web utilizando HTML y CSS."
+    }
+  ],
+  "education": [
+    {
+      "place": "Universidad Experimental de Los Llanos \"Ezequiel Zamora\"",
+      "title": "Ingeniero en Informática",
+      "date": "Marzo 2020 - Actualidad",
+      "description": ""
+    },
+    {
+      "place": "Unidad Educativa \"San Judas Tadeo\"",
+      "title": "Bachiller",
+      "date": "Sept. 2014 - Junio 2019",
+      "description": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "Albumino",
+      "cover_image": "https://i.imgur.com/VPMLeVU.png",
+      "description": "Una aplicación fullstack para crear, compartir y subir álbumes y fotos (similar a Google Photos). Creado con Next.js 12, Next-Auth, MongoDB, Firebase & ChakraUI",
+      "urls": {
+        "demo": "https://albumino.vercel.app",
+        "code": "https://github.com/bkfan1/albumino"
+      },
+      "tags": ["DESARROLLO WEB"]
+    },
+    {
+      "name": "Form Maker",
+      "cover_image": "https://i.imgur.com/w8pg1aN.png",
+      "description": "Una aplicación fullstack para crear y compartir formularios en línea, con un sistema de autenticación, creado con NextJS, MongoDB & TailwindCSS",
+      "urls": {
+        "demo": "https://form-maker.vercel.app",
+        "code": "https://github.com/bkfan1/form-maker"
+      },
+      "tags": ["DESARROLLO WEB"]
+    },
+    {
+      "name": "Spotify User Analysis",
+      "cover_image": "https://i.imgur.com/43KsFZJ.png",
+      "description": "Análisis y visualización de datos de usuarios obtenidos de la API Web de Spotify. Creado con Python, Flask y ChartJS",
+      "urls": {
+        "code": "https://github.com/bkfan1/spotify-user-analysis"
+      },
+      "tags": ["CIENCIA DE DATOS"]
+    },
+    {
+      "name": "Sticky Notes SPA",
+      "cover_image": "https://i.imgur.com/pf0ik7K.png",
+      "description": "Una aplicación de página única (SPA) para crear notas adhesivas que soporta código markdown. Creado con React y TailwindCSS",
+      "urls": {
+        "demo": "https://sticky-notes-app.vercel.app/",
+        "code": "https://github.com/bkfan1/sticky-notes-app"
+      },
+      "tags": ["DESARROLLO WEB"]
+    },
+    {
+      "name": "Geography Game",
+      "cover_image": "https://i.imgur.com/cEw1vzu.png",
+      "description": "Juego de arrastrar y soltar de geografía creado con React y SASS",
+      "urls": {
+        "demo": "https://geography-class-minigame.vercel.app/",
+        "code": "https://github.com/bkfan1/geography-class-minigame"
+      },
+      "tags": ["DESARROLLO WEB"]
+    },
+    {
+      "name": "Hangman Game",
+      "cover_image": "https://i.imgur.com/O9P2wqZ.png",
+      "description": "El clásico juego de adivinanza de letras llamado Hangman implementado con React y Sass.",
+      "urls": {
+        "demo": "https://hangman-game-bk.vercel.app/",
+        "code": "https://github.com/bkfan1/hangman-game/"
+      },
+      "tags": ["DESARROLLO WEB"]
+    },
+    {
+      "name": "Guessing Words Game",
+      "cover_image": "https://i.imgur.com/DFfFLra.png",
+      "description": "Juego de adivinanza de palabras creado con React y TailwindCSS",
+      "urls": {
+        "demo": "https://english-class-minigame.vercel.app/",
+        "code": "https://github.com/bkfan1/english-class-minigame"
+      },
+      "tags": ["DESARROLLO WEB"]
+    },
+    {
+      "name": "Pomodoro Timer",
+      "cover_image": "https://i.imgur.com/Hd925Qh.png",
+      "description": "Concéntrate y realiza tus tareas con este temporizador Pomodoro creado con React y TailwindCSS",
+      "urls": {
+        "demo": "https://pomodoro-app-five-mu.vercel.app/",
+        "code": "https://github.com/bkfan1/pomodoro-app"
+      },
+      "tags": ["DESARROLLO WEB"]
+    }
+  ]
+}
