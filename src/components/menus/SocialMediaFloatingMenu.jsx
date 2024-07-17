@@ -1,6 +1,5 @@
-import { ButtonGroup, IconButton, Tooltip } from "@chakra-ui/react";
+import { ButtonGroup, IconButton, Tooltip, Link } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { Link } from "react-router-dom";
 
 export default function SocialMediaFloatingMenu() {
   return (
