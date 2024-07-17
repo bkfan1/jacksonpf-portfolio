@@ -1,5 +1,4 @@
 import {
-  Button,
   Flex,
   HStack,
   Icon,
@@ -8,6 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { nanoid } from "nanoid";
+import { useTranslation } from "react-i18next";
 import {
   BsBriefcase,
   BsBriefcaseFill,
@@ -40,6 +40,9 @@ const pages = [
 ];
 
 function Navbar() {
+
+  const {t} = useTranslation();
+  
   return (
     <>
       <Flex
@@ -63,7 +66,7 @@ function Navbar() {
                       fontWeight={isActive ? "600" : ""}
                       textUnderlineOffset={8}
                     >
-                      {text}
+                      {t(`navbar.${text.toLowerCase()}`)}
                     </Text>
                   </HStack>
                 )}
@@ -71,12 +74,6 @@ function Navbar() {
             </StackItem>
           ))}
         </Stack>
-
-        <StackItem>
-          <NavLink to="/contact">
-            <Button size={"lg"}>Contact Me</Button>
-          </NavLink>
-        </StackItem>
       </Flex>
     </>
   );
