@@ -14,12 +14,15 @@ import {
   Tag,
   Text,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import {
   BsGithub,
   BsPlayCircleFill,
 } from "react-icons/bs";
 
 function ProjectCard({ data }) {
+  const {t} = useTranslation();
+
   const { name, description, cover_image, urls, tags } = data;
   return (
     <>
@@ -34,9 +37,9 @@ function ProjectCard({ data }) {
           {cover_image ? (
             <Image
               src={`${cover_image}`}
-              
+              width={"100%"}
               height="100%"
-              objectFit={"contain"}
+              objectFit={{sm:"cover", md:"contain"}}
               alt={`Picture of project: ${name}`}
             />
           ) : (
@@ -54,9 +57,9 @@ function ProjectCard({ data }) {
               <Tag
                 key={tag.id}
                 fontWeight={"bold"}
-                colorScheme={tag.colorScheme}
+                colorScheme={tag === "DESARROLLO WEB" || tag === "WEB DEV" ? "red" : "green"}
               >
-                {tag.name}
+                {tag}
               </Tag>
             ))}
           </HStack>
@@ -67,7 +70,7 @@ function ProjectCard({ data }) {
           <Flex flexDirection={"column"} gap={2} width={"100%"}>
             <Link href={urls.code} isExternal>
               <Button leftIcon={<BsGithub />} width={{ base: "100%" }}>
-                Source code
+                {t('buttons.sourceCode')}
               </Button>
             </Link>
             {urls.demo ? (
@@ -77,7 +80,7 @@ function ProjectCard({ data }) {
                   colorScheme="green"
                   width={{ base: "100%" }}
                 >
-                  Live demo
+                  {t('buttons.liveDemo')}
                 </Button>
               </Link>
             ) : (
