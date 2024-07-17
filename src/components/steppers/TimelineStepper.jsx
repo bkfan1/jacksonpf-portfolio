@@ -10,9 +10,11 @@ import {
   Stepper,
   Text,
 } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { BsAwardFill, BsFillGearFill } from "react-icons/bs";
 
-function TimelineStepper({ timelineData, type }) {
+function TimelineStepper({ type }) {
+  const {t} = useTranslation();
   const stepIcon =
     type === "work" ? (
       <BsFillGearFill />
@@ -21,6 +23,8 @@ function TimelineStepper({ timelineData, type }) {
     ) : (
       ""
     );
+
+  const timelineData = t(`${type === "work" ? "experience" : type}`, { returnObjects: true });
 
   return (
     <>

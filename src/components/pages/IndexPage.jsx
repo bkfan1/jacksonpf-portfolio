@@ -1,6 +1,6 @@
 import {
-  Box,
   Button,
+  ButtonGroup,
   Divider,
   HStack,
   Heading,
@@ -13,10 +13,19 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import JackoImage from "../../assets/jacko1.jpg";
-import { BsEnvelopeFill, BsTelephoneFill } from "react-icons/bs";
+import { BsEnvelopeFill, BsPlusCircle, BsTelephoneFill } from "react-icons/bs";
 import { contactData } from "../../utils/portfolioData";
+import { useTranslation } from "react-i18next";
+import { IoDocumentAttach } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
+import { FaCode } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
+const MotionVStack = motion(VStack);
+const MotionImage = motion(Image);
 
 function IndexPage() {
+  const { t } = useTranslation();
   return (
     <>
       <Stack
@@ -26,36 +35,56 @@ function IndexPage() {
         paddingX={10}
         spacing={20}
       >
-        <VStack
+        <MotionVStack
           as={"header"}
           width={{
             base: "xl",
             sm: "initial",
-            md: "initial",
-            lg: "2xl",
+            md: "full",
+            lg: "xl",
             xl: "xl",
           }}
           marginTop={20}
+          initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.4 }}
         >
           <VStack alignItems={"start"}>
-            <Heading size={"lg"}>👋 Hey there!</Heading>
-            <Heading size={"4xl"}>{`I'm Jackson Paredes Ferranti`}</Heading>
-            <Heading size={"2xl"} my={4}>Web Developer</Heading>
-            <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              explicabo tempora distinctio provident error facilis, adipisci
-              impedit. Voluptatum quas aut ipsam doloremque velit minus vel sit,
-              et, accusantium exercitationem quidem!
+            <Heading size={"lg"}>👋 {t("hero.greet")}</Heading>
+            <Heading size={"4xl"}>{t("hero.whoaim")}</Heading>
+
+            <HStack placeItems={"center"}>
+              <Heading size={"2xl"} my={2} color="lightgreen">
+                {t("hero.role")}
+              </Heading>
+              <Icon as={FaCode} boxSize={"50px"} color={"lightgreen"} />
+            </HStack>
+
+            <Text fontSize={"large"} maxWidth={"xl"}>
+              {t("hero.description")}
             </Text>
-            <Button
-              size={"lg"}
-              width={{ sm: "full", md: "md", lg: "md", xl: "initial" }}
-              mt={2}
-            >
-              Hire Me
-            </Button>
+
+            <ButtonGroup mt={4} spacing={4}>
+              <Button
+                size={"lg"}
+                colorScheme="green"
+                leftIcon={<IoDocumentAttach />}
+              >
+                {t("buttons.downloadCv")}
+              </Button>
+              <NavLink to={"/about"}>
+                <Button
+                  size={"lg"}
+                  variant={"outline"}
+                  leftIcon={<BsPlusCircle />}
+                >
+                  {t("buttons.knowMore")}
+                </Button>
+              </NavLink>
+            </ButtonGroup>
           </VStack>
-          <Divider margin={6} backgroundColor={"gray.200"} />
+          <Divider my={4} backgroundColor={"gray.200"} />
 
           <HStack
             width={"100%"}
@@ -64,32 +93,31 @@ function IndexPage() {
           >
             <StackItem flex={1}>
               <HStack>
-              <Icon as={BsEnvelopeFill} boxSize={6}  />
-              <VStack>
-                <Heading size={"lg"} width={"full"}>
-                  Email
-                </Heading>
-                <Text width={"full"}>{contactData.email}</Text>
-              </VStack>
+                <Icon as={BsEnvelopeFill} boxSize={6} />
+                <VStack>
+                  <Heading size={"lg"} width={"full"}>
+                    {t("titles.email")}
+                  </Heading>
+                  <Text width={"full"}>{contactData.email}</Text>
+                </VStack>
               </HStack>
-              
             </StackItem>
 
             <StackItem flex={1}>
-            <HStack>
-              <Icon as={BsTelephoneFill} boxSize={6}  />
-              <VStack>
-                <Heading size={"lg"} width={"full"}>
-                  Phone
-                </Heading>
-                <Text width={"full"}>{contactData.phone}</Text>
-              </VStack>
+              <HStack>
+                <Icon as={BsTelephoneFill} boxSize={6} />
+                <VStack>
+                  <Heading size={"lg"} width={"full"}>
+                    {t("titles.phone")}
+                  </Heading>
+                  <Text width={"full"}>{contactData.phone}</Text>
+                </VStack>
               </HStack>
             </StackItem>
           </HStack>
-        </VStack>
+        </MotionVStack>
 
-        <Image
+        <MotionImage
           src={JackoImage}
           display={{
             base: "initial",
@@ -104,7 +132,10 @@ function IndexPage() {
           alt="Picture of Jackson Paredes Ferranti"
           border={"4px"}
           borderColor={"white"}
-          
+          initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.4 }}
         />
       </Stack>
     </>
